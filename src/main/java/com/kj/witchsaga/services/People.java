@@ -1,9 +1,15 @@
 package com.kj.witchsaga.services;
 
+import org.hibernate.validator.constraints.Range;
+
+import javax.validation.constraints.Min;
+
 public class People {
 
+    @Min(1)
     private Integer deathYear;
 
+    @Range(min = 1,max = 150)
     private Integer deathAge;
 
     public People() {

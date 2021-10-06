@@ -30,17 +30,14 @@ public class Witch {
         if (year <= 0)
             return 0;
 
-        int fibo[] = new int[year+1];
-        fibo[0] = 0; fibo[1] = 1;
-
         // Initialize result
-        int sum = fibo[0] + fibo[1];
+        int sum = 0;
+        double phi = (1 + Math.sqrt(5)) / 2;
 
         // Add remaining terms
-        for (int i=2; i<=year; i++)
+        for (int i=0; i<=year; i++)
         {
-            fibo[i] = fibo[i-1]+fibo[i-2];
-            sum += fibo[i];
+            sum = sum + (int)Math.round(Math.pow(phi, i) / Math.sqrt(5));
         }
 
         return sum;

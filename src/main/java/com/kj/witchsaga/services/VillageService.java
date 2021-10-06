@@ -19,6 +19,12 @@ public class VillageService {
             return  Double.valueOf(-1);
         }
 
+        //if case an empty list is given
+        if (peopleList.size() <= 0){
+            return  Double.valueOf(-1);
+        }
+
+        //loop through people to get the number of people died at year they were born
         for(int i=0;i<peopleList.size();i++)
         {
             if (isBornBeforeWitchTookControll(peopleList.get(i).getBornYear())){

@@ -16,7 +16,5 @@ public class WitchTest {
         Assert.assertEquals(Integer.valueOf(986),witch.getNumberOfKilledOnYear(14));
         Assert.assertEquals(Integer.valueOf(1596),witch.getNumberOfKilledOnYear(15));
 
-
-
     }
 }
